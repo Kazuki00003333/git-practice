@@ -1,0 +1,197 @@
+<!-- メモ
+
+各配列の合計が１８０以下の人を不合格として出力
+# member_scores = {
+#   "john": {math: 89, english: 28, history: 39},
+#    "mike": {math: 20, english: 78, history: 90},
+#     "emily": {math: 78, english: 39, history: 39}
+# }
+
+# member_scores.each do |name, scores|
+#   total_score = 0
+#   scores.each do |subject, score|
+#     total_score = total_score + score
+#   end
+
+#   if total_score <= 180
+#     puts "#{name}は不合格"
+#   end
+# end
+
+# ============================================================-
+
+# 課題
+
+# person = person.new("John","Smith",25)
+
+
+# person.fullname
+# => John Smith
+
+# person.age
+# => 25
+
+# person.info
+# => John Smith(25)
+
+# person.rename("John","Manjiro")
+# person.info
+# => John Manjiro(25)
+
+# class Person
+#     attr_reader :age, :first_name, :family_name
+#     attr_writer :first_name, :family_name
+    
+#     def initialize(first_name, family_name, age)
+#     @first_name = first_name
+#     @family_name = family_name
+#     @age = age
+#     end
+    
+#     def fullname
+#       "#{first_name} #{family_name}"
+#     end
+    
+#     def info
+#     "#{fullname}(#{age})"
+#     end
+    
+#     def rename(first_name, family_name)
+#     self.first_name = first_name
+#     self.family_name = family_name
+#     end
+#     end
+    
+#     person = Person.new("John", "Smith", 25)
+#     puts person.fullname
+#     puts person.age
+#     puts person.info
+    
+#     person.rename("John", "Manjiro")
+#     puts person.info
+
+
+    # =========================================
+    # sprit
+# # 文字列から配列を作る
+
+# sentence = "I am a teacher"
+# words = sentence.split(" ")
+# puts words
+
+# # include
+# 変数内に（）内の単語があるか探す
+
+# string = "I am a teacher"
+# string.include?("teacher")
+
+# gsub
+# 第一引数と第二引数を入れ替える
+
+# name = "toda"
+# puts name.gsub("t", "d")
+# puts name
+
+# # gsub!
+# # 破壊的メソッド
+# name = "toda"
+# puts name.gsub!("t", "d")
+# puts name
+
+# # length
+# name = "aaaaaaaaaaaa"
+# puts name.length
+
+# ===================================================
+# Integer
+
+# even?,odd?
+# 偶数,奇数
+
+# Array
+# .join 配列の連結
+# .sum  配列の合計値
+# .sample 配列内からランダムで取り出す
+# .sort 配列の順番を数字順に入れ替える
+# .flatten 複数配列をフラットにして連結
+# .select ex) {|e| e % 3 == 0} ３の倍数だけ取り出し配列を作る
+ 
+# array1 = [1,2,3,4,5]
+# array2 = array1.map do |e|
+#   e + 1
+# end
+
+# puts array2
+
+
+# scores = {
+#   math: 87,
+#   history: 34,
+#   english: 89
+# }
+
+# texts = scores.map do |k, v|
+#   "#{k}: #{v}点"
+# end
+#   puts texts
+
+
+# ==============================
+#例外
+# rais StandardError
+# ＝＞
+# Traceback (most recent call last):
+# main.rb:4:in `<main>': undefined method `rais' for main:Object (NoMethodError)
+# Did you mean?  raise
+# # exit status 
+
+# begin
+# rais StandardError
+# rescue => e
+# puts "rescue"
+# end
+
+# ===================================
+# 別シートのメソッドを引っ張る
+# require_relative "./name"
+
+# names = ["tanaka", "taro"]
+# puts_name(names)
+
+# =====================================================
+# Qiita APIの取得
+# require 'uri'
+# require 'net/http'
+# require 'json'
+
+# url = "https://qiita.com/api/v2/items?query=Ruby"
+
+# uri = URI.parse(url)
+# res = Net::HTTP.get(uri)
+# res = JSON.parse(res)
+
+# res.each do |item|
+#   puts "#{item["title"]} by#{item["user"]["name"]}"
+# end
+
+# ==============================================
+# require 'uri'
+# require 'net/http'
+# require 'json'
+
+# class Qiita
+#   attr_reader :url
+#   def initialize(query)
+#   @url = "https://qiita.com/api/v2/items?query=Ruby#{query}"
+#   end
+# def search
+#  uri = URI.parse(url)
+#  res = Net::HTTP.get(uri)
+#  res = JSON.parse(res)
+
+#  res.map do |article|
+#   "#{article['title']} by #{article['user']['name']}"
+# end
+# end
+# end
+# =============================================== -->
